@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".DeleteUser">
+
+
+    <EditText
+        android:id="@+id/dltemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Email"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"></EditText>
+
+    <EditText
+        android:id="@+id/dltpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="password"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"></EditText>
+
+
+    <Button
+        android:id="@+id/dltbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="Delete"
+        android:textSize="20sp"
+        android:textStyle="bold|italic">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="644dp"
+        app:srcCompat="@drawable/delete" />
+
+
+</LinearLayout>

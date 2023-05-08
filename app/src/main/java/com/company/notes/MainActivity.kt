@@ -3,12 +3,11 @@ package com.company.notes
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.widget.Button
 import android.widget.Toast
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
+import com.google.firebase.auth.FirebaseAuth
 import java.util.concurrent.Executor
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +18,26 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        val btn_click_me = findViewById(R.id.samplelogout) as Button
+// set on-click listener
+        btn_click_me.setOnClickListener {
+
+                    FirebaseAuth.getInstance().signOut()
+                    finish()
+
+
+        }
+
+
+        val btn_click = findViewById(R.id.sampleprofile) as Button
+// set on-click listener
+        btn_click.setOnClickListener {
+            val intent = Intent(this@MainActivity, SettingsProfileActivity::class.java)
+            startActivity(intent)
+
+        }
 
         setSupportActionBar(findViewById(R.id.toolbar))
 

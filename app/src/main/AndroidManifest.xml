@@ -2,13 +2,108 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.company.notes">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Tourista"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
+        <activity
+            android:name=".payment.UserViewFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteUser"
+            android:exported="false" />
+        <activity
+            android:name=".ThankYou"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="false" />
+        <activity
+            android:name=".payment.UpdateCard"
+            android:exported="false" />
+        <activity
+            android:name=".payment.AllCardDetails"
+            android:exported="false" />
+        <activity
+            android:name=".payment.AddPayment"
+            android:exported="false" />
+        <activity
+            android:name=".sightseeing.AdminMainSightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sightseeing.UserViewSpecificSight"
+            android:exported="false" />
+        <activity
+            android:name=".sightseeing.UserViewSights"
+            android:exported="false" />
+        <activity
+            android:name=".sightseeing.AdminViewSightDetails"
+            android:exported="false" />
+        <activity
+            android:name=".sightseeing.AdminUpdateSights"
+            android:exported="false" />
+        <activity
+            android:name=".sightseeing.AdminAddSights"
+            android:exported="false" />
+        <activity
+            android:name=".transport.UserViewVehicle"
+            android:exported="false" />
+        <activity
+            android:name=".transport.UserViewSpecificVehicle"
+            android:exported="false" />
+        <activity
+            android:name=".hotel.AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".transport.AdminUpdateTransport"
+            android:exported="false" />
+        <activity
+            android:name=".transport.AdminViewTransportDetails"
+            android:exported="false" />
+        <activity
+            android:name=".transport.AdminAddTransport"
+            android:exported="false" />
+        <activity
+            android:name=".transport.AdminMainTransportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".hotel.UserViewSpecificDetails"
+            android:exported="false" />
+        <activity
+            android:name=".hotel.AdminUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".hotel.AdminHotelDetails"
+            android:exported="false" />
+        <activity
+            android:name=".hotel.AdminAddHotel"
+            android:exported="false" />
+        <activity
+            android:name=".UserHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".NoteDetails"
             android:exported="false" />
@@ -16,10 +111,20 @@
             android:name=".NewNote"
             android:exported="false" />
         <activity
-            android:name=".NotesList"
+            android:name=".hotel.UserViewHotel"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".NotesList"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".hotel.UserViewHotel" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
